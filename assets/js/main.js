@@ -3,6 +3,14 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+window.onload = () => {
+	const anchors = document.querySelectorAll('a');
+	const transition_el = document.querySelector('.transition');
+  
+	setTimeout(() => {
+	  transition_el.classList.remove('is-active');
+	}, 500);
+}
 
 (function($) {
 
