@@ -4,17 +4,27 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 window.onload = () => {
+	const anchors = document.querySelectorAll('a:not([href*="#"])');
 	const transition_el = document.querySelector('.transition');
   
 	setTimeout(() => {
 		transition_el.classList.remove('is-active');
 	}, 500);
 	
-	window.addEventListener('beforeunload', () =>{
-		setInterval(() => {
+	for (let i = 0; i < anchors.length; i++) {
+		const anchor = anchors[i];
+	
+		anchor.addEventListener('click', e => {
+			e.preventDefault();
+			let target = e.currentTarget.href;
+		
 			transition_el.classList.add('is-active');
-		  }, 500);
-	});
+		
+			setInterval(() => {
+				window.location.href = target;
+			}, 500);
+		})
+	}
   }
 
 (function($) {
