@@ -6,6 +6,9 @@
 window.onload = () => {
 	const anchors = document.querySelectorAll('a:not([href*="#"])');
 	const transition_el = document.querySelector('.transition');
+	const anchors1 = document.querySelectorAll('a');
+	console.log(anchors);
+	console.log(anchors1);
   
 	setTimeout(() => {
 		transition_el.classList.remove('is-active');
