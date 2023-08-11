@@ -6,9 +6,6 @@
 window.onload = () => {
 	const anchors = document.querySelectorAll('a:not([href*="#"])');
 	const transition_el = document.querySelector('.transition');
-	const anchors1 = document.querySelectorAll('a');
-	console.log(anchors);
-	console.log(anchors1);
   
 	setTimeout(() => {
 		transition_el.classList.remove('is-active');
@@ -28,7 +25,33 @@ window.onload = () => {
 			}, 500);
 		})
 	}
-  }
+	
+	const modals = document.querySelectorAll(".modal");
+	const triggers = document.querySelectorAll(".trigger");
+	const closeButtons = document.querySelectorAll(".close-button");
+
+	for (let i = 0; i < triggers.length; i++) {
+		const modal = modals[i];
+		const trigger = triggers[i];
+		const closeButton = closeButtons[i];
+
+		trigger.addEventListener("click", (e) => {
+			e.preventDefault();
+			modal.classList.toggle("show-modal");
+		});
+
+		closeButton.addEventListener("click", (e)=>  {
+			e.preventDefault();
+			modal.classList.toggle("show-modal");
+		});
+		window.addEventListener("click", (e) => {
+			e.preventDefault();
+			if (e.target === modal) {
+				modal.classList.toggle("show-modal");
+			}
+		});
+	}
+}
 
 (function($) {
 
