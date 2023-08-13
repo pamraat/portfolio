@@ -2385,6 +2385,11 @@ input, select, textarea {
 				margin-left: 300px;
 			}
 
+		/* Modal */
+			div.modal-content{
+				left: 60%;
+			}
+
 	}
 
 /* Normal */
@@ -2400,6 +2405,11 @@ input, select, textarea {
 			#main section.cover {
 				padding: 5em 0;
 			}
+
+		/* Modal */
+		div.modal-content{
+			left: 60%;
+		}
 
 	}
 
@@ -2466,6 +2476,11 @@ input, select, textarea {
 
 			#main {
 				margin-left: 20%;
+			}
+
+		/* Modal */
+			div.modal-content{
+				left: 60%;
 			}
 
 	}
