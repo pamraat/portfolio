@@ -2306,10 +2306,11 @@ input, select, textarea {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		background-color: white;
+		border-radius: 0.5rem;
 		padding: 1rem 1.5rem;
 		width: 50%;
 		max-height: calc(100vh - 50px);
-		border-radius: 0.5rem;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.close-button {
@@ -2335,7 +2336,6 @@ input, select, textarea {
 
 	.modal-body::-webkit-scrollbar {
 		width: 10px;
-		
 	}
 	
 	.modal-body::-webkit-scrollbar-track {
@@ -2723,5 +2723,21 @@ input, select, textarea {
 				#footer .copyright li:first-child {
 					margin-top: 0;
 				}
+
+		/* Modal */
+		div.modal-content{
+			border-radius: 0;
+			width: 100%;
+			max-height: calc(100vh - 100px);
+			top: 50%;
+			left: 50%;
+		}
+
+		div.modal-body{
+			width: 100%;
+			max-height: calc(100vh - 200px);
+			top: 50%;
+			left: 50%;
+		}
 
 	}
