@@ -73,6 +73,21 @@ window.onload = () => {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
+
+			$nav_a = $nav.find('a');
+			let cont1 = window.location.href.includes("robotics");
+			let cont2 = window.location.href.includes("simulation");
+			let cont3 = window.location.href.includes("experimentation");
+
+			if(cont1){
+				$nav_a.eq(1).addClass('active');
+			}
+			else if(cont2){
+				$nav_a.eq(2).addClass('active');
+			}
+			else if(cont3){
+				$nav_a.eq(3).addClass('active');
+			}
 		});
 
 	// Nav.

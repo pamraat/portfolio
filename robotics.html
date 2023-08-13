@@ -55,7 +55,7 @@
 			<div id="main">
 
 				<!-- Intro -->
-					<section id="project" class="one dark cover">
+					<section id="top" class="one dark cover">
 						<div class="container">
 
 							<header>
@@ -89,7 +89,7 @@
 									<article class="item">
 										<div class="vid fit trigger">
 											<video autoplay loop muted>
-												<source src="images/robAct.mp4" type=video/mp4>
+												<source src="images/robotics/robAct.mp4" type=video/mp4>
 											</video>
 											<header>
 												<h3>Robot Actuation and Control</h3>
@@ -101,19 +101,52 @@
 												<h3>Robot Actuation and Control</h3>
 												<div class="modal-body">
 													<p>
-														This project was designed to control the robot actuators and
-														prepare algorithm to solve any unexpected problems.
+														This project was developed to control the robot actuators,
+														communicate with ground computer, and acquire & analyze sensor data.
+														The algorithms are robust and can handle any unexpected issues in control,
+														communication and sensing.
+													</p>
+													<p>
+														<strong>Github Link:</strong> <a href="https://github.com/pamraat/port-robot-actuation">https://github.com/pamraat/port-robot-actuation </a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license and iRobotCreateSimulator toolbox
+														which can be downloaded from <a href="https://github.com/autonomousmobilerobots/iRobotCreateSimulatorToolbox">here</a>.
 													</p>
 													<div class="vid fit">
 														<video autoplay loop muted>
-															<source src="images/robVisitWP.mp4" type=video/mp4>
+															<source src="images/robotics/robVisitWP.mp4" type=video/mp4>
 														</video>
 													</div>
+													<p>
+														The robot is a modified roomba controlled with Raspberry Pi 3 Model B.
+														For overhead localization, video camera was used. Moreover, Real Sense Depth camera,
+														bump sensors and odometry sensor was installed on the robot.
+														<br>
+														In this project, the robot uses feedback linearization to move form
+														its current location to the goal. In the video shown above, robot
+														moves from (0, 0) to (-3, 0) to (0, -3) to (3, 0) to (0, 3). The robot
+														uses bumb sensor to detect collision with walls, backs up, turns 30&deg
+														counter clockwise and continues moving.
+													</p>
 													<div class="vid fit">
 														<video autoplay loop muted>
-															<source src="images/robAct.mp4" type=video/mp4>
+															<source src="images/robotics/robAct.mp4" type=video/mp4>
 														</video>
 													</div>
+													<p>
+														The codes used in the simulator were implemented on a
+														real robot. The figure below describes the actuation 
+														error.
+														<div class="image fit">
+															<img src="images/robotics/2_1a_1.png" />
+														</div>
+														The image below shows robot response to feedback linearization
+														for different feedback gain &epsilon, where * represent the points
+														it is attempting to visit.
+														<div class="image fit">
+															<img src="images/robotics/2_4_b_plot.jpg" />
+														</div>
+													</p>
 												</div>
 											</div>
 										</div>
