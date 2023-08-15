@@ -71,6 +71,7 @@ window.onload = () => {
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
+				$('.loader-wrapper').fadeOut('fast');
 				$body.removeClass('is-preload');
 			}, 100);
 
