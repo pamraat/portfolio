@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 window.onload = () => {
+
 	const anchors = document.querySelectorAll('a:not([href*="#"])');
 	const transition_el = document.querySelector('.transition');
   
@@ -17,7 +18,8 @@ window.onload = () => {
 		anchor.addEventListener('click', e => {
 			e.preventDefault();
 			let target = e.currentTarget.href;
-		
+			
+			$('.loader').fadeIn('fast');
 			transition_el.classList.add('is-active');
 		
 			setInterval(() => {
@@ -71,7 +73,7 @@ window.onload = () => {
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
-				$('.loader-wrapper').fadeOut('fast');
+				$('.loader').fadeOut('fast');
 				$body.removeClass('is-preload');
 			}, 100);
 
