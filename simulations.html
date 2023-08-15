@@ -82,7 +82,16 @@
 								<h2>Projects</h2>
 							</header>
 
-							<p>I am great at Simulations!</p>
+							<p>
+								This page is dedicated to my projects in simulations in field of
+								CFD, Computational Aerodynamics, Optimization techniques and
+								Non linear dynamics. All the projects are published on GitHub and
+								are free to use under MIT License. Clicking on each tab will
+								generate a popup describing the project briefly. Links to resources
+								are provided in the page of the corresponding project. Feel free
+								to drop a message in 'Contact' section if you have further
+								questions regarding my projects!
+							</p>
 
 							<div class="row">
 								<div class="col-4 col-12-mobile">
@@ -214,6 +223,7 @@
 											</div>
 										</div>
 									</article>
+									
 									<article class="item">
 										<div class="image fit trigger">
 											<img src="images/simulations/compMap.png" alt="" />
@@ -240,14 +250,14 @@
 														analytical approximation of compressor performance.
 													</p>
 													<p>
-														<strong>Github Link: </strong> <a href="hhttps://github.com/pamraat/port-turbomachinery">https://github.com/pamraat/port-turbomachinery</a>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-turbomachinery">https://github.com/pamraat/port-turbomachinery</a>
 														<br>
 														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license.
 													</p>
 													<p>
 														The following figure shows the flowchart of the solver.
 													</p>
-													<div class="image fit trigger">
+													<div class="image fit">
 														<img src="images/simulations/flowchartTurbo.png" alt="" />
 													</div>
 													<p>
@@ -290,7 +300,7 @@
 														<br>
 														<strong>Notes:</strong> To operate this code, you'll need a valid MATLAB license.
 													</p>
-													<div class="image fit trigger">
+													<div class="image fit">
 														<img src="images/simulations/VLMtheo.jpg" alt="" />
 													</div>
 													<p>
@@ -325,8 +335,10 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<div class="image fit trigger">
-											<img src="images/pic04.jpg" alt="" />
+										<div class="vid fit trigger">
+											<video autoplay loop muted>
+												<source src="images/simulations/brazilNut.mp4" type=video/mp4>
+											</video>
 											<header>
 												<h3>Brazil Nut Effect</h3>
 											</header>
@@ -334,13 +346,65 @@
 										<div class="modal">
 											<div class="modal-content">
 												<span class="close-button">×</span>
-												<h1>Hello, I am a Project 3!</h1>
+												<h3>Brazil Nut Effect</h3>
+												<div class="modal-body">
+													<p>
+														The study was done to gauge capabilities of NGA2 in handling
+														the particle collisions among themselves and with the wall.
+														Two particle diameters were defined, d1=0.01 𝑚, and d2=0.005 m.
+														Particles were assigned the diameters alternately, and due to
+														random positioning of all particles, a system of homogenously
+														distributed particles throughout the space was obtained. Gravity
+														in -Y was applied and simulation was ran so that particle bed
+														can be formed. 
+													</p>
+													<p>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-partbed">https://github.com/pamraat/port-partbed</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need to install NGA2 and operate on 'develop' git branch, 
+														which can be downloaded from <a href="https://github.com/desjardi/NGA2">here</a>.
+													</p>
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/brazilNut.mp4" type=video/mp4>
+														</video>
+													</div>
+													<p>
+														For shaking, gravity flipping model is adopted. The gravity is inverted to +Y
+														for time equal to value of parameter flipTime. The gravity is in +Y direction
+														from t = 0 s, to t = flipTime. The gravity is flipped back to -Y direction at
+														t = flipTime, and the duration is set such that the net displacement of particles
+														is 0. However, the velocity of particle at the end of &Deltat is not 0.
+														Thus, by the time particles are near the bottom wall, the particles have a velocity,
+														which makes them bounce on the wall hard. This sets particles to motion in 
+														+Y despite gravity being -Y.
+														In the simulation, time to flip gravity from +Y to -Y is set to 3xflipTime, so
+														that particles have flipTime time to levitate while gravity pointing downwards,
+														thus creating real scenario which cause granular convection. The plots for mean
+														y position of both types of particles is shown in figure below.
+													</p>
+													<div class="image fit">
+														<img src="images/simulations/brazilConv.png" />
+													</div>
+													<p>
+														there is large grouping of small particles on the top, while in rest of the 
+														locations small particles exist in smaller groups. The reasoning behind large 
+														grouping on top is assumed that small particles being lighter, are propelled much 
+														higher compared to large particles after impact on the lower wall, and when the 
+														flipping is turned off, all the levitating small particles settle later than 
+														large particles, thereby forming a large group on the top. This indicates that 
+														horizontal shaking of the particles might be a better choice, however NGA2 
+														requires significant functionality addition to be able to that.
+													</p>
+												</div>
 											</div>
 										</div>
 									</article>
 									<article class="item">
-										<div class="image fit trigger">
-											<img src="images/pic05.jpg" alt="" />
+										<div class="vid fit trigger">
+											<video autoplay loop muted>
+												<source src="images/simulations/case2.mp4" type=video/mp4>
+											</video>
 											<header>
 												<h3>Preferential Particle Concetration under Turbulence</h3>
 											</header>
@@ -348,13 +412,81 @@
 										<div class="modal">
 											<div class="modal-content">
 												<span class="close-button">×</span>
-												<h1>Hello, I am a Project 4!</h1>
+												<h3>Preferential Particle Concetration under Turbulence</h3>
+												<div class="modal-body">
+													<p>
+														the Stokes number Stp of a particle p is critical in understanding how
+														much a particle is affected by the changes in the carrier flow field. 
+														At low values of the Stokes number (i.e., the particle response time 
+														scale is short compared to the time scale over which the fluid changes),
+														particles act as “tracers”, closely following the fluid pathlines. At 
+														high Stokes number (i.e., the particle response time scale is large 
+														compared to the flow time scale), particles act as “cannonballs” that 
+														are barely affected by the surrounding flow field. Moreover, it have 
+														been knownfor over two decades that resonance between the particles 
+														and the flow field can happen if the time scales become comparable, 
+														i.e., Stokes number ≈ 1, leading to a phenomenon called “preferential concentration”.
+													</p>
+													<p>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-hit">https://github.com/pamraat/port-hit</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need to install NGA2 and operate on 'develop' git branch, 
+														which can be downloaded from <a href="https://github.com/desjardi/NGA2">here</a>.
+													</p>
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/case1.mp4" type=video/mp4>
+														</video>
+													</div>
+													<p>
+														Three cases were studied here. First case was with St = 0.57, simulation video
+														shown above.
+													</p>
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/case2.mp4" type=video/mp4>
+														</video>
+													</div>
+													<p>
+														Second case was with St = 1.33, simulation video
+														shown above.
+													</p>
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/case3.mp4" type=video/mp4>
+														</video>
+													</div>
+													<p>
+														Third case was with St = 8.1, simulation video
+														shown above.
+														<br>
+														The comparison of each case with experiment is showed in the following three
+														figure.
+													</p>
+													<div class="image fit">
+														<img src="images/simulations/case1.png" />
+													</div>
+													<div class="image fit">
+														<img src="images/simulations/case2.png" />
+													</div>
+													<div class="image fit">
+														<img src="images/simulations/case3.png" />
+													</div>
+													<p>
+														The effect of clustering is very prevalent in case I, slightly less in case II,
+														almost nonexistent in case III, from experiment. These findings are correctly 
+														simulated by NGA2, as can be seen in the figures above. In simulations, due to 
+														dissipative nature of turbulence, the eddies die exponentially, which require us 
+														to add forcing term. This forcing term has to be tuned to match the turbulence 
+														of experiments which may rarely be exact.
+													</p>
+												</div>
 											</div>
 										</div>
 									</article>
 									<article class="item">
 										<div class="image fit trigger">
-											<img src="images/pic07.jpg" alt="" />
+											<img src="images/simulations/ionised.jpg" alt="" />
 											<header>
 												<h3>Reactive Nozzle Flow on Mars</h3>
 											</header>
@@ -362,13 +494,57 @@
 										<div class="modal">
 											<div class="modal-content">
 												<span class="close-button">×</span>
-												<h1>Hello, I am a Project 8!</h1>
+												<h3>Reactive Nozzle Flow on Mars</h3>
+												<div class="modal-body">
+													<p>
+														The Stokes number Stp of a particle p is critical in understanding how
+														much a particle is affected by the changes in the carrier flow field. 
+														At low values of the Stokes number (i.e., the particle response time 
+														scale is short compared to the time scale over which the fluid changes),
+														particles act as “tracers”, closely following the fluid pathlines. At 
+														high Stokes number (i.e., the particle response time scale is large 
+														compared to the flow time scale), particles act as “cannonballs” that 
+														are barely affected by the surrounding flow field. Moreover, it have 
+														been knownfor over two decades that resonance between the particles 
+														and the flow field can happen if the time scales become comparable, 
+														i.e., Stokes number ≈ 1, leading to a phenomenon called “preferential concentration”.
+													</p>
+													<p>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-martian">https://github.com/pamraat/port-martian</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll a valid MATLAB license.
+													</p>
+													<p>
+														The code is capable to handle the following species:
+													</p>
+													<div class="image fit">
+														<img src="images/simulations/species.png" />
+													</div>
+													<p>
+														The code uses NASA CEA to and equilibrium solution as well as to
+														initiate the non-equilibrium solution. Thus, the kind of inputs
+														has to be in realm of CEA. Though it covers most varieties of problems,
+														it fails to cover equilibrium solution of pre-ionized air, i.e. we
+														cannot input the ionized (or electron) species, but it does provide
+														ionized species in output. Because of this limitation, the outputs
+														of any previous run that has to be used in new run cannot be used.
+														<br>
+														Following picture shows pressure variation in a MOC based bell shape
+														nozzle in martian atmosphere with inlet pressure being 52.5 bars and
+														flow being viscous, non-equilibrium and reactive with ionization.
+													</p>
+													<div class="image fit">
+														<img src="images/simulations/ionised.jpg" />
+													</div>
+												</div>
 											</div>
 										</div>
 									</article>
 									<article class="item">
-										<div class="image fit trigger">
-											<img src="images/pic07.jpg" alt="" />
+										<div class="vid fit trigger">
+											<video autoplay loop muted>
+												<source src="images/simulations/cylinder.mp4" type=video/mp4>
+											</video>
 											<header>
 												<h3>MATLAB Code for Viscous Flow over a Cylinder</h3>
 											</header>
@@ -376,15 +552,98 @@
 										<div class="modal">
 											<div class="modal-content">
 												<span class="close-button">×</span>
-												<h1>Hello, I am a Project 11!</h1>
+												<h3>MATLAB Code for Viscous Flow over a Cylinder</h3>
+												<div class="modal-body">
+													<p>
+														This is a 2nd order central differencing explicit solver
+														for Vorticity Transport Equation (VTE). Upwind scheme is
+														used for convection and artificial diffusion is provided.
+													</p>
+													<p>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-cylinder">https://github.com/pamraat/port-cylinder</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll a valid MATLAB license.
+													</p>
+													<p>
+														The following video shows the output of a viscid flow across
+														a cylinder.
+													</p>
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/cylinder.mp4" type=video/mp4>
+														</video>
+													</div>
+													For the same case, following video shows vorticity evolution during the
+													process.
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/vort.mp4" type=video/mp4>
+														</video>
+													</div>
+												</div>
 											</div>
 										</div>
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<div class="image fit trigger">
-											<img src="images/pic07.jpg" alt="" />
+										<div class="vid fit trigger">
+											<video autoplay loop muted>
+												<source src="images/simulations/risingBubble.mp4" type=video/mp4>
+											</video>
+											<header>
+												<h3>Rising Bubble</h3>
+											</header>
+										</div>
+										<div class="modal">
+											<div class="modal-content">
+												<span class="close-button">×</span>
+												<h3>Rising Bubble</h3>
+												<div class="modal-body">
+													<p>
+														This is a case study to gauge accuracy of NGA2 predictions on rising gas bubbles in a liquid.
+														Because of their importance in a wide range of chemical transformation processes,
+														rising bubbles have been extensively studied. Of particular interest is their 
+														terminal velocity (i.e., how fast a bubble rises once a steady-state is reached),
+														their shape (how deformed/spherical is the bubble at steady-state), and their
+														dynamics (how long does it take for the bubble to reach steady-state, does a 
+														steady solution even exist or does the bubble oscillate?)
+													</p>
+													<p>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-bubble">https://github.com/pamraat/port-bubble</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need to install NGA2 and operate on 'develop' git branch, 
+														which can be downloaded from <a href="https://github.com/desjardi/NGA2">here</a>.
+													</p>
+													<p>
+														Following figures show the comparison of simulation results and the experimental
+														results from Bhaga and Weber. The Morton number (Mo) is attempted to be kept similar 
+														while Eötvos number (Eö) is always 116 in simulation. The shape of bubble is always less 
+														spherical (flatter) than expected. This may be because of the inverse viscosity 
+														averaging model, which undermines the viscosity in interface region, and thus 
+														reduces the Mo. Due to reduce Mo, the bubble may be appearing flatter than in real.
+													</p>
+													<div class="image fit">
+														<img src="images/simulations/bub1.png" />
+													</div>
+													<div class="image fit">
+														<img src="images/simulations/bub2.png" />
+													</div>
+													<div class="image fit">
+														<img src="images/simulations/bub3.png" />
+													</div>
+													<div class="image fit">
+														<img src="images/simulations/bub4.png" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article class="item">
+										<div class="vid fit trigger">
+											<video autoplay loop muted>
+												<source src="images/simulations/RT_uns.mp4" type=video/mp4>
+											</video>
 											<header>
 												<h3>Rayleigh Taylor Instability</h3>
 											</header>
@@ -392,27 +651,129 @@
 										<div class="modal">
 											<div class="modal-content">
 												<span class="close-button">×</span>
-												<h1>Hello, I am a Project 6!</h1>
+												<h3>Rayleigh-Taylor Instability</h3>
+												<div class="modal-body">
+													<p>
+														This is a case study to gauge accuracy of NGA2 predictions on Rayleigh-Taylor Instability.
+														The Rayleigh-Taylor instability is a fundamental process by which a heavy layer of fluid on top
+														of a light layer of fluid destabilizes under gravity, leading to rapid collapse of the layers
+														and the formation of a heavy jet moving downward surrounded by light “bubbles” moving upward.
+														Ofparticular interest is the relation between the lengthscale over which the layer  is initially 
+														perturbed, and the corresponding growth rate of the instability.
+													</p>
+													<p>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-mprt">https://github.com/pamraat/port-mprt</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need to install NGA2 and operate on 'develop' git branch, 
+														which can be downloaded from <a href="https://github.com/desjardi/NGA2">here</a>.
+													</p>
+													<p>
+														For the given configuration, critical wavenumber corresponds to
+														the wavelength of 17 mm.
+														Following is the videos of wavelength of 14 mm. As expected, it
+														is stable, and the instability causes oscillations about the mean
+														surface.
+													</p>
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/RT_st.mp4" type=video/mp4>
+														</video>
+													</div>
+													<p>
+														Following is the videos of wavelength of 17 mm. As expected, it is neutrally stable.
+														The disturbance does not grow.
+													</p>
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/RT_nst.mp4" type=video/mp4>
+														</video>
+													</div>
+													<p>
+														Following is the videos of wavelength of 20 mm. As expected, it is unstable.
+														The disturbance grows. exponentially.
+													</p>
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/RT_uns.mp4" type=video/mp4>
+														</video>
+													</div>
+													The comparison of growth rate prediction of NGA2 and the theoretical prediction
+													is shown below.
+													<div class="image fit">
+														<img src="images/simulations/ngrplot.png" />
+													</div>
+													As can be seen, the growth rate is matching very closely to the inviscid exact equation.
+													However, the deviation can be seen towards the lower k (which corresponds to higher 
+													domain size in x-direction). Since the number of elements are kept same in x-direction,
+													the elements are skewed for lower wavenumbers, which might be the source of deviation 
+													since NGA2 gives best result for such simulations when the cels are almost cubic.
+												</div>
 											</div>
 										</div>
 									</article>
 									<article class="item">
 										<div class="image fit trigger">
-											<img src="images/pic07.jpg" alt="" />
+											<img src="images/simulations/from7phase.jpg" alt="" />
 											<header>
-												<h3>Nonlinear Analysis of Control Valve Dynamics </h3>
+												<h3>Nonlinear Analysis of Control Valve Dynamics</h3>
 											</header>
 										</div>
 										<div class="modal">
 											<div class="modal-content">
 												<span class="close-button">×</span>
-												<h1>Hello, I am a Project 9!</h1>
+												<h3>Nonlinear Analysis of Control Valve Dynamics</h3>
+												<div class="modal-body">
+													<p>
+														A nonlinear dynamic analysis is conducted on a hydraulic valve. The
+														valve being analyzed is shown in the figure below.
+													</p>
+													<div class="image fit">
+														<img src="images/simulations/valve.JPG" />
+													</div>
+													<p>
+														Valve is governed by the 3rd order nonlinear ordinary differential equation.
+														Valve position (X) normalized by maximum valve opening distance is used as the 
+														independent variable. Depending on the initial set position of the valve,
+														the response of valve varied. It was observed, that for all X < 2, the response
+														was stable, as shown the next figure. The figure after that represent the
+														phase portrait of the system.
+													</p>
+													<div class="image fit">
+														<img src="images/simulations/from2phase.jpg" />
+													</div>
+													<div class="image fit">
+														<img src="images/simulations/from2phase.jpg" />
+													</div>
+													<p>
+														For X > 2, the response was oscillating motion of the valve piston,
+														and the phase portrait was converging to a limit cycle, as can be seen
+														in next two figures.
+													</p>
+													<div class="image fit">
+														<img src="images/simulations/from7act.jpg" />
+													</div>
+													<div class="image fit">
+														<img src="images/simulations/from7phase.jpg" />
+													</div>
+													<p>
+														Next, a factor of leak in the valve is introduced, and the system responds
+														with chaotic behavior.
+													</p>
+													<div class="image fit">
+														<img src="images/simulations/from101act.jpg" />
+													</div>
+													<div class="image fit">
+														<img src="images/simulations/from101phase.jpg" />
+													</div>
+												</div>
 											</div>
 										</div>
 									</article>
 									<article class="item">
-										<div class="image fit trigger">
-											<img src="images/pic07.jpg" alt="" />
+										<div class="vid fit trigger">
+											<video autoplay loop muted>
+												<source src="images/simulations/GA.mp4" type=video/mp4>
+											</video>
 											<header>
 												<h3>Genetic Algorithm Optimizer (C)</h3>
 											</header>
@@ -420,7 +781,46 @@
 										<div class="modal">
 											<div class="modal-content">
 												<span class="close-button">×</span>
-												<h1>Hello, I am a Project 12!</h1>
+												<h3>Genetic Algorithm Optimizer (C)</h3>
+												<div class="modal-body">
+													<p>
+														The algorithm written includes Roulette Wheel Selection for crossover and Muhlenbein's
+														Method for mutation. The optimum values of parameters were obtained by observing trend
+														of convergence. Elitisim was later added and convergence time reduce to about 1/8th.
+													</p>
+													<p>
+														<strong>Github Link: </strong> <a href="https://github.com/pamraat/port-gas">https://github.com/pamraat/port-gas</a>
+														<br>
+														<strong>Notes:</strong> To operate this code, you'll need to install NGA2 and operate on 'develop' git branch, 
+														which can be downloaded from <a href="https://github.com/desjardi/NGA2">here</a>.
+													</p>
+													<p>
+														The optimized parameters are as follows:
+														<ol>
+															<li>Population number=20</li>
+															<li>Crossover probability=0.8</li>
+															<li>Mutation Probability=0.05</li>
+															<li>Crossover weight=0.3</li>
+														</ol>
+														Following is the performance without elitism.
+													</p>
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/GA.mp4" type=video/mp4>
+														</video>
+													</div>
+													<p>
+														Following is the performace with elitism. Notice that
+														the actual convergence is very fast, and at least one particle
+														remains at the global optima despite other particles being thrown away
+														due to mutation.
+													</p>
+													<div class="vid fit">
+														<video autoplay loop muted>
+															<source src="images/simulations/GAelitism.mp4" type=video/mp4>
+														</video>
+													</div>
+												</div>
 											</div>
 										</div>
 									</article>
