@@ -48,7 +48,6 @@ window.onload = () => {
 			modal.classList.toggle("show-modal");
 		});
 		window.addEventListener("click", (e) => {
-			e.preventDefault();
 			if (e.target === modal) {
 				modal.classList.toggle("show-modal");
 			}
@@ -70,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			  }
 			}
 
-			console.log(video.target);
 			video.target.load();
 			video.target.classList.remove("lazy");
 			lazyVideoObserver.unobserve(video.target);

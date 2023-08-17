@@ -2308,7 +2308,6 @@ input, select, textarea {
 		visibility: hidden;
 		transform: scale(1.1);
 		transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-		z-index: 10000;
 	}
 	
 	.modal-content{
@@ -2332,11 +2331,11 @@ input, select, textarea {
 		cursor: pointer;
 		border-radius: 0.25rem;
 		background-color: lightgray;
-		z-index: 10001;
 	}
 	
 	.close-button:hover {
 		background-color: darkgray;
+		z-index: 10001;
 	}
 
 	.modal-body{
@@ -2367,6 +2366,7 @@ input, select, textarea {
 		visibility: visible;
 		transform: scale(1.0);
 		transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+		z-index: 10000;
 	}
 
 
