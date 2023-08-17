@@ -80,7 +80,7 @@ window.onload = () => {
 			$nav_a = $nav.find('a');
 			let cont1 = window.location.href.includes("robotics");
 			let cont2 = window.location.href.includes("simulation");
-			let cont3 = window.location.href.includes("experimentation");
+			let cont3 = window.location.href.includes("design");
 
 			if(cont1){
 				$nav_a.eq(1).addClass('active');
