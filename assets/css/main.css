@@ -2308,6 +2308,7 @@ input, select, textarea {
 		visibility: hidden;
 		transform: scale(1.1);
 		transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+		z-index: 10000;
 	}
 	
 	.modal-content{
